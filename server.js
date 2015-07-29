@@ -24,11 +24,11 @@ myExpress.get("/", function(req, res){
 });
 
 myExpress.post("/register", function(req, res){
-
+	res.send('thanks!');
 });
 
-myExpress.post("/", function(req, res){
-
+myExpress.post("/signin", function(req, res){
+	res.send('sup dawg');
 });
 
 myServer = myExpress.listen(3000, function(){

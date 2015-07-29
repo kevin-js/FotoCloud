@@ -3,12 +3,13 @@
 <head>
 	<title>FotoCloud</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	<script src="public/javascripts/carousel.js"></script>
+	<script src="public/javascripts/load.js"></script>
 	<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
 	<link type="text/css" rel="stylesheet" href="public/stylesheets/style.css" />
+	<script src="https://cdn.firebase.com/js/client/2.2.7/firebase.js"></script>
 </head>
 <body>
-	<nav class="navbar navbar-inverse navbar-fixed-top main-nav">
+	<!--<nav class="navbar navbar-inverse navbar-fixed-top main-nav">
 		<div class="container">
 			<div class="navbar-header">
 				<a href="/"><h5 id="logo">FotoCloud</h5></a>
@@ -27,7 +28,7 @@
 				</ul>
 			</div>
 		</div>
-	</nav>
+	</nav>-->
 	<div id="background">
 		<section id="main-body">
 				<br />
@@ -52,6 +53,62 @@
 				<section id="welcome">
 					<h1>Welcome to your FotoCloud.</h1>
 					<p>Cuz we're so much better than Instagram. 'Nuff said.</p>
+					<br />
+					<span>
+						<button class="btn btn-lg my-btn colorme" type="button" id="login" onclick="login()">Log In</button>
+						<button class="btn btn-lg my-btn colorme" type="button" id="register" onclick="register()">Register</button>
+					</span>
+				</section>
+				<section id="signin">
+					<form method="post" action="/signin">
+						<fieldset>
+							<span class="row">
+								<input class="my-field-half colorme" type="text" name="email" placeholder="Username" />
+								<input class="my-field-half colorme" type="password" name="password" placeholder="Password" />
+							</span>
+							<span class="row">
+								<button type="submit" class="btn btn-lg my-btn colorme">Log In</button>
+								<button class="btn btn-lg my-btn colorme" type="button" onclick="cancel()">Cancel</button>
+							</span>
+						</fieldset>
+					</form>
+				</section>
+				<section id="signup">
+					<h1 class="colorme">Signup is quick, easy, and free.</h1>
+					<p class="colorme">If you choose to deactivate your account at any point, we promise to fully delete all your data -- we aren't Ashley Madison.</p>
+					<form method="post" action="/register">
+						<fieldset>
+							<span class="row">
+								<input class="my-field-half colorme" type="text" name="firstname" placeholder="First Name(s)" />
+								<input class="my-field-half colorme" type="text" name="lastname" placeholder="Last Name(s)" />
+							</span>
+							<span class="row">
+								<input class="my-field colorme colorme" type="text" name="email" placeholder="Email" />
+							</span>
+							<span class="row">
+								<input class="my-field colorme" type="text" name="email" placeholder="Primary Telephone Number" />
+							</span>
+							<span class="row">
+								<input class="my-field colorme" type="text" name="email" placeholder="Username" />
+							</span>
+							<span class="row">
+								<input class="my-field-half" type="password" name="password" placeholder="Password" />
+								<input class="my-field-half" type="password" name="password-confirm" placeholder="Confirm Password" />
+							</span>
+							<span class="row">
+								<label class="colorme">Would you like to receive periodic updates from us?</label><br/>
+								<input type="radio" name="mailing-list" value="Yes" />Yes
+								<input type="radio" name="mailing-list" value="No" />No<br />
+							</span>
+							<span class="row">
+								<input type="checkbox" /><label class="colorme">I have read and agree to the Terms and Conditions.</label>
+							</span>
+							<span class="row">
+								<button class="btn btn-lg my-btn colorme" type="submit">Sign Me Up!</button>
+								<button class="btn btn-lg my-btn colorme" type="button" onclick="cancel()">Maybe Another Time</button>
+							</span>
+						</fieldset>
+					</form>
 				</section>
 				<br />
 				<br />
@@ -119,8 +176,8 @@
 				<p id="copyright">&copy; 2015 Kevin Guh and John Ling</p>
 			</div>
 		</footer>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-		<script src="public/javascripts/scrolldown.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="public/javascripts/scrolldown.js"></script>
 	</div>
 </body>
 </html>
