@@ -1,0 +1,80 @@
+body {
+  padding: 0 0 0 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+footer {
+	background-color: #111111;
+	max-height: 5%;
+	clear: both;
+	width: 100% !important;
+}
+
+.list-item {
+	float: left;
+}
+
+.container-box {
+	margin-top: 5%;
+	max-height: 30%;
+	max-width: 45%
+	display: inline;
+	float: left;
+}
+
+.group {
+	max-height: 10%;
+	max-width: 15%
+}
+
+.members {	
+	max-height: 10%;
+	max-width: 15%
+}
+
+.pics {
+	max-height: 10%;
+	max-width: 15%
+}
+
+#background{
+	background-image: url('/public/images/stock0.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#main-body {
+	color: #f8f8f8;
+}
+
+#welcome {
+	text-align: center;
+	color: #ffffff;
+}
+
+#down-button {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;	
+}
+
+#sub-body {
+	margin-top: 0%;
+	margin-bottom: 0%;
+	background-color: rgba(25, 36, 12, 0.3);
+}
+
+#logo {
+	color: #3790ed;
+	position: relative;
+	padding-top: 9%
+}
+
+#copyright {
+	padding-top: 1%;
+	color: #f8f8f8;
+}

@@ -1,0 +1,36 @@
+{
+  "name": "FotoCloud",
+  "version": "1.0.0",
+  "description": "dependencies for FotoCloud",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.13.1",
+    "firebase": "^2.2.7",
+    "fs": "0.0.2",
+    "path": "^0.11.14",
+    "swig": "^1.4.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "swag",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kgeezy93/FotoCloud.git"
+  },
+  "keywords": [
+    "swag",
+    "photos",
+    "sharing",
+    "friends",
+    "fun",
+    "yay"
+  ],
+  "author": "Kevin Guh and John Ling",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kgeezy93/FotoCloud/issues"
+  },
+  "homepage": "https://github.com/kgeezy93/FotoCloud#readme"
+}
