@@ -13,24 +13,56 @@ $(document).ready(function(){
 		}
 	}, 1000);
 
-	$('#welcome, #down-button').hide();
-	$('#welcome, #down-button').fadeIn(1200);
+	$('#welcome').hide();
+	$('#welcome').fadeIn(1200);
 });
 
 var login = function(){
-	$('#welcome, #down-button').fadeOut(800);
-	$('#welcome, #down-button').hide();
-	$('#signin').animate({width: "toggle"}, 1200);
+	$('#welcome').fadeOut(800);
+	$('#welcome').hide();
+	$('#signin').fadeIn(1200);
 };
 
 var register = function(){
-	$('#welcome, #down-button').fadeOut(800);
-	$('#welcome, #down-button').hide();
-	$('#signup').animate({width: "toggle"}, 1200);
+	$('#welcome').fadeOut(800);
+	$('#welcome').hide();
+	$('#signup').fadeIn(1200);
 };
 
 var cancel = function(){
 	$('#signup').hide();
 	$('#signin').hide();
 	$('#welcome, #down-button').fadeIn(1200);
+};
+
+var validateRegistration = function(){
+	var requiredItems = document.getElementsByClassName("required-registration");
+	var allIsGood = true;
+
+	for(var i=0; i<requiredItems.length;i++){
+		if(requiredItems[i].value.length == 0){
+		//	var errorLabel = requiredItems[i].name + "-error";
+		//	document.getElementById(errorLabel).parentNode.style.display = "block";
+		//	document.getElementById(errorLabel).style.display = "inline-block";
+			allIsGood = false;
+		}
+	}
+
+	if(requiredItems['password'].value == requiredItems['password-confirm'].value){
+		//document.getElementById("password-confirm-error").style.display = "none";
+	}else{
+		//document.getElementById("password-confirm-error").style.display = "inline-block";
+		allIsGood = false;
+	}
+
+	if(requiredItems['agree'].checked != true){
+		//document.getElementById("agree-error").parentNode.style.display = "block";
+		//document.getElementById("agree-error").style.display = "inline-block";
+		allIsGood = false;
+	}
+	return allIsGood;
+};
+
+var validateLogin = function(){
+
 };

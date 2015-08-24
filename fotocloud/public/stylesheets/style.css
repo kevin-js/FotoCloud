@@ -1,7 +1,12 @@
 body {
-  padding: 0 0 0 0;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  color: rgb(123, 180, 223);
+  	padding: 0 0 0 0;
+  	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  	color: rgb(123, 180, 223);
+  	background-image: url('/public/images/stock0.jpg');
+  	background-size: cover;
+  	background-repeat: no-repeat;
+  	background-position: fixed;
+	z-index: 2;
 }
 
 a {
@@ -10,13 +15,33 @@ a {
 
 footer {
 	background-color: #111111;
-	max-height: 5%;
-	clear: both;
+	max-height: 10%;
 	width: 100% !important;
 }
 
+.error {
+	display: none;
+	box-sizing: padding-box;
+	margin-top: -10px;
+	margin-bottom: -15px;
+}
+
+.error label {
+	border: none;
+	color: #fc312e;
+}
+
+.my-navbar {
+	background-color: rgba(25, 36, 12, 0.3);
+	color: #f8f8f8;
+}
+
+.my-navbar:hover {
+	background-color: #111111;
+}
+
 .list-item {
-	float: left;
+	float: right;
 }
 
 .colorme:hover {
@@ -63,15 +88,30 @@ footer {
 	width: 610px;
 	border-radius: 4px;
 }
-
-#background{
+/*
+#background {
 	background-image: url('/public/images/stock0.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-position: fixed;
+	z-index: 2;
 }
 
+#background2 {
+	background-image: url('/public/images/stock1.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: fixed;
+	z-index: 1;
+}
+*/
 #main-body {
+	height: 100vh;
 	color: #f8f8f8;
+}
+
+#offset-top {
+	margin-top: 25vh;
 }
 
 #welcome {
@@ -109,7 +149,6 @@ footer {
 	margin-left: 3px;
 }
 
-
 #down-button {
 	display: block;
 	margin-left: auto;
@@ -125,10 +164,12 @@ footer {
 #logo {
 	color: #3790ed;
 	position: relative;
-	padding-top: 9%
+	padding-top: 9%;
 }
 
 #copyright {
-	padding-top: 1%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-left: 20px;
 	color: #f8f8f8;
 }
